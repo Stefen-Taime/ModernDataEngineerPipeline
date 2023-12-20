@@ -98,6 +98,11 @@ Combining Specific Field Search with Language Filter:
 * Combines a specific field search with a language filter.
 
 
+* Example API Call: GET [http://localhost:8000/api/v1/news/?search=description|defender&language=en](http://localhost:8000/api/v1/news/?search=description|defender&language=en)
+
+* Looks for news items where the description contains “defender” and the language is English.
+
+
 # ModernDataEngineerPipeline - Startup Guide
 
 This guide provides step-by-step instructions for setting up and running the "ModernDataEngineerPipeline" project.
@@ -177,9 +182,5 @@ python main.py
 
 Follow these steps to set up and run the "ModernDataEngineerPipeline" project.
 
-
-* Example API Call: GET [http://localhost:8000/api/v1/news/?search=description|defender&language=en](http://localhost:8000/api/v1/news/?search=description|defender&language=en)
-
-* Looks for news items where the description contains “defender” and the language is English.
 
 [Medium](https://github.com/Stefen-Taime/ModernDataEngineerPipeline](https://medium.com/@stefentaime_10958/moderndataengineering-building-a-robust-data-pipeline-integrating-proxy-rotation-kafka-mongodb-9a908d1bd94f)https://medium.com/@stefentaime_10958/moderndataengineering-building-a-robust-data-pipeline-integrating-proxy-rotation-kafka-mongodb-9a908d1bd94f)
