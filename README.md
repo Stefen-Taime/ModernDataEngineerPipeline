@@ -97,6 +97,87 @@ Combining Specific Field Search with Language Filter:
 
 * Combines a specific field search with a language filter.
 
+
+# ModernDataEngineerPipeline - Startup Guide
+
+This guide provides step-by-step instructions for setting up and running the "ModernDataEngineerPipeline" project.
+
+## Setup Steps
+
+### 1. Clone the Repository
+
+Start by cloning the repository from GitHub:
+
+```bash
+git clone https://github.com/Stefen-Taime/ModernDataEngineerPipeline
+```
+
+### 2. Navigate to the Project Directory
+
+```bash
+cd ModernDataEngineerPipeline
+```
+
+### 3. Launch Services with Docker
+
+Use `docker-compose` to build and start the services:
+
+```bash
+docker-compose up --build -d
+```
+
+### 3.1 Use MongoDB and Redis Clusters
+
+You can use ready-made MongoDB and Redis clusters from MongoAtlas and Redis, or create a free account to get trial clusters. It is also possible to use local MongoDB and Redis clusters by deploying them with Docker.
+
+### 4. Navigate to the `src` Folder
+
+```bash
+cd src
+```
+
+### 5. Run the Proxy Handler
+
+Execute `proxy_handler.py` to retrieve proxies and store them in Redis:
+
+```bash
+python proxy_handler.py
+```
+
+### 6. Handle RSS Feeds with Kafka
+
+Use `rss_handler.py` to produce messages towards Kafka:
+
+```bash
+python rss_handler.py
+```
+
+### 7. Add JSON Sink Connectors
+
+Add the two JSON Sink connectors found in the `connect` folder on Confluent Connect or use the Connect API.
+
+### 8. Launch Logstash
+
+Run Logstash using Docker:
+
+```bash
+docker exec -it <container_id> /bin/bash -c "mkdir -p ~/logstash_data && bin/logstash -f pipeline/ingest_pipeline.conf --path.data /usr/share/logstash/logstash_data"
+```
+
+### 9. Start the API
+
+Finally, start the API:
+
+```bash
+cd api
+python main.py
+```
+
+---
+
+Follow these steps to set up and run the "ModernDataEngineerPipeline" project.
+
+
 * Example API Call: GET [http://localhost:8000/api/v1/news/?search=description|defender&language=en](http://localhost:8000/api/v1/news/?search=description|defender&language=en)
 
 * Looks for news items where the description contains “defender” and the language is English.
