@@ -1,0 +1,8 @@
+python-dotenv==1.0.0
+flask_graphql==2.0.1
+graphql-core==2.3.2 
+graphene==2.1.8
+graphql-relay==2.0.1
+avro-python3
+confluent-kafka[avro]
+psycopg2-binary

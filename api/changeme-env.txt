@@ -1,0 +1,15 @@
+REDIS_HOST=
+REDIS_PORT=17135
+REDIS_DB=Opend-free-db
+REDIS_KEY=proxies
+LANGUAGES=en,pl,es,de  
+REDIS_PASSWORD=
+REDIS_USERNAME=default
+
+SECRET_KEY=Helloword2023!
+ALGORITHM="HS256"
+ACCESS_TOKEN_EXPIRE_MINUTES=15
+
+MONGO_URI=mongodb+srv://:@atlascluster.mongodb.net/kafka-topic?retryWrites=true&w=majority
+
+ELASTICSEARCH_URL=http://localhost:9200
