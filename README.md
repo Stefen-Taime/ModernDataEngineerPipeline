@@ -101,4 +101,4 @@ Combining Specific Field Search with Language Filter:
 
 * Looks for news items where the description contains “defender” and the language is English.
 
-[Medium]([https://github.com/Stefen-Taime/ModernDataEngineerPipeline](https://medium.com/@stefentaime_10958/moderndataengineering-building-a-robust-data-pipeline-integrating-proxy-rotation-kafka-mongodb-9a908d1bd94f)https://medium.com/@stefentaime_10958/moderndataengineering-building-a-robust-data-pipeline-integrating-proxy-rotation-kafka-mongodb-9a908d1bd94f)
+[Medium](https://github.com/Stefen-Taime/ModernDataEngineerPipeline](https://medium.com/@stefentaime_10958/moderndataengineering-building-a-robust-data-pipeline-integrating-proxy-rotation-kafka-mongodb-9a908d1bd94f)https://medium.com/@stefentaime_10958/moderndataengineering-building-a-robust-data-pipeline-integrating-proxy-rotation-kafka-mongodb-9a908d1bd94f)
